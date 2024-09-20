@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<section class="courses">
+    <h1>Courses</h1>
+    <input type="text" placeholder="Search for a course..." id="course-search">
+    
+    <div class="course-list">
+        <div class="course-card">
+            <h3>Java</h3>
+            <p>A comprehensive course on Java programming language.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Python</h3>
+            <p>Learn Python from basics to advanced topics.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

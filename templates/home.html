@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hustlers Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/styles.css') }}">
+    <script src="{{ url_for('static', filename='../static/js/script.js') }}" defer></script> 
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="main-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <span class="company-name">Hustlers</span>
+        </div>
+        <nav class="navbar">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#courses">Courses</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="welcome-message">
+            <h1>Welcome to our community of Hustlers & ReThinkers!</h1>
+            <div class="buttons">
+                <a href="{{ url_for('login_page') }}" class="btn" id="loginBtn" style="text-decoration: none;">Login</a>
+                <a href="{{ url_for('signup') }}" class="btn" id="signupBtn" style="text-decoration: none;">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ML CAPTCHA Section -->
+    <section class="ml-captcha-section">
+        <h2>ML CAPTCHA Model</h2>
+        <p>This model requires no human interaction and utilizes various ML techniques:</p>
+        <div class="captcha-cards">
+            <div class="card">
+                <h3>Mouse Acceleration Rate</h3>
+                <p>Measures the speed and direction of mouse movements to differentiate users.</p>
+            </div>
+            <div class="card">
+                <h3>Keyboard Typing Speed</h3>
+                <p>Analyzes typing patterns and speed for user verification.</p>
+            </div>
+            <div class="card">
+                <h3>Honey Pot Techniques</h3>
+                <p>Employs hidden fields to trap bots while allowing humans to pass through.</p>
+            </div>
+            <div class="card">
+                <h3>Dynamic Button Interaction</h3>
+                <p>Changes button states to engage genuine users effectively.</p>
+            </div>
+            <div class="card">
+                <h3>Live Location Tracking</h3>
+                <p>Utilizes geolocation data to ensure user authenticity.</p>
+            </div>
+            <div class="card">
+                <h3>IP Address Detection</h3>
+                <p>Analyzes IP addresses to identify unusual patterns of access.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider"> <!-- Decorative Line -->
+
+    <!-- Dashboard, Courses, Services, About Us Blocks -->
+    <section class="content-sections">
+        <div id="dashboard" class="block">
+            <h2>Dashboard</h2>
+            <p>Manage all your activities and stay on track.</p>
+        </div>
+
+        <div id="courses" class="block">
+            <h2>Courses</h2>
+            <p>Discover a wide range of learning opportunities.</p>
+        </div>
+
+        <div id="services" class="block">
+            <h2>Services</h2>
+            <p>Explore the services tailored for your growth.</p>
+        </div>
+
+        <div id="about" class="block">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and team.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="subscribe-section">
+            <h2 class="subscribe-heading">Subscribe Us</h2>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email" class="email-input" required>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+
+        <p>&copy; 2024 Hustlers & ReThinkers. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

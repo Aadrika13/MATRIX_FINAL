@@ -1,0 +1,23 @@
+.dashboard {
+    padding: 50px;
+}
+
+.graphs {
+    margin-bottom: 30px;
+}
+
+.attendance-graph, .progress-graph {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.courses {
+    background-color: #eaeaea;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}

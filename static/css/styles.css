@@ -1,0 +1,259 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    padding-top: 110px;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: top 0.3s, background 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.company-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1c9bf;
+}
+
+/* Welcome Section */
+.welcome-section {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #4a90e2, #50e3c2);
+    color: white;
+    text-align: center;
+}
+
+.welcome-message {
+    max-width: 700px;
+}
+
+.welcome-message h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 0 10px;
+    background-color: white;
+    color: #4a90e2;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: hsla(86, 5%, 74%, 0.098);
+    color: white;
+}
+
+/* ML CAPTCHA Section */
+.ml-captcha-section {
+    padding: 40px 10px;
+    background-color: #e9eff1;
+    text-align: center;
+}
+
+.ml-captcha-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ml-captcha-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Card Styles */
+.captcha-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff; /* Initial background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 40px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #e1f5fe; /* Light blue on hover */
+}
+
+.card:active {
+    background-color: #90caf9; /* Darker blue when clicked */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Divider */
+.section-divider {
+    border: none;
+    border-top: 2px solid #4a90e2;
+    margin: 40px 0;
+}
+
+/* Content Sections */
+.content-sections {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 10px;
+    background-color: #f7f7f7;
+}
+
+.block {
+    width: 20%;
+    height: 30%;
+    min-width: 250px;
+    min-height: 250px;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.block h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.subscribe-section {
+    margin-bottom: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #50e3c2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #4a90e2;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .block {
+        width: 90%;
+    }
+    .card {
+        width: calc(50% - 40px); /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-message h1 {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .captcha-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Full width for mobile */
+    }
+}

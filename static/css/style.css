@@ -1,0 +1,143 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+    background-color: #f0f2f5; /* Soft background color */
+    color: #333;
+    padding: 20px;
+}
+
+/* Center the form container */
+.container {
+    max-width: 400px; /* Max width for the form */
+    margin: 5% auto; /* Center it with some top margin */
+    background: white; /* White background for the form */
+    padding: 30px; /* More padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect on container */
+.container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover for effect */
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form fields */
+}
+
+/* Label styling */
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555; /* Subtle color for labels */
+    font-weight: 500;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+/* Focus state for inputs */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none; /* Remove outline */
+}
+
+/* Styling for submit button */
+input[type="submit"] {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Disabled submit button */
+input[type="submit"]:disabled {
+    background-color: red; /* Red when disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Center and style links */
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Error or bot detected message */
+#botDetected {
+    display: none;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Responsive media query for smaller screens */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
