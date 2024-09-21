@@ -8,8 +8,9 @@
 /* Global body styling */
 body {
     font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
-    background-color: #f0f2f5; /* Soft background color */
-    color: #333;
+    background: url("../images/bg-image.jpg") no-repeat center center fixed; /* Add your image here */
+    background-size: cover; /* Ensure the background covers the entire page */
+    color: #000;
     padding: 20px;
 }
 
@@ -17,7 +18,7 @@ body {
 .container {
     max-width: 400px; /* Max width for the form */
     margin: 5% auto; /* Center it with some top margin */
-    background: white; /* White background for the form */
+    background: rgba(255, 255, 255, 0.5);; /* White background for the form */
     padding: 30px; /* More padding for spacing */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
@@ -33,7 +34,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #000;
     font-weight: 600;
     font-size: 24px;
 }
@@ -48,7 +49,7 @@ form {
 label {
     margin-bottom: 5px;
     font-size: 14px;
-    color: #555; /* Subtle color for labels */
+    color: #000; /* Subtle color for labels */
     font-weight: 500;
 }
 

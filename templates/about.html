@@ -3,13 +3,24 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-<section class="about">
-    <h1>About Us</h1>
-    <p>Details about your team.</p>
-
-    <div class="contact-us">
-        <h2>Contact Us</h2>
-        <p>Feel free to reach out to us at contact@yourproject.com</p>
+<div class="banner">
+    <div class="slider" style="--quantity: 4;">
+        <div class="item" style="--position: 1;" data-info="Details for Avatar 1">
+            <img src="../static/images/rt.jpg" alt="avatar1">
+            <div class="info-card"><b>RISHABH TRIPATHI</b><br>FRONTEND DEVELOPER and ML DEVELOPER </div>
+        </div>
+        <div class="item" style="--position: 2;" data-info="Details for Avatar 2">
+            <img src="../static/images/sa.jpg" alt="avatar2">
+            <div class="info-card"><b>SANSKRATI AGRAWAL</b><br>UI DESIGNER</div>
+        </div>
+        <div class="item" style="--position: 3;" data-info="Details for Avatar 3">
+            <img src="../static/images/ap.jpg" alt="avatar3">
+            <div class="info-card"><b>ANURAG PATHAK</b><br>ML DEVELOPER and BACKEND DEVELOPER</div>
+        </div>
+        <div class="item" style="--position: 4;" data-info="Details for Avatar 4">
+            <img src="../static/images/aj.jpg" alt="avatar4">
+            <div class="info-card"><b>AADRIKA JAIN</b><br>FRONTEND DEVELOPER and INTEGRATION</div>
+        </div>
     </div>
-</section>
+</div>
 {% endblock %}

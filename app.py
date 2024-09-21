@@ -84,7 +84,7 @@ def register_user():
     })
 
     flash("Sign-up Successful!", "success")
-    return redirect(url_for('home'))
+    return redirect(url_for('login_page'))
 
 @app.route('/dashboard')
 def dashboard():

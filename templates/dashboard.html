@@ -5,22 +5,164 @@
 {% block content %}
 <section class="dashboard">
     <div class="graphs">
-        <h2>Attendance Graph</h2>
-        <div class="attendance-graph">
-            <!-- Placeholder for the attendance graph -->
-            <p>Attendance Graph - Coming Soon</p>
-        </div>
-
-        <h2>Overall Progress Graph</h2>
-        <div class="progress-graph">
-            <!-- Placeholder for the progress graph -->
-            <p>Progress Graph - Under Development</p>
+        <div class="graph-container">
+            <!-- Overall Attendance Graph -->
+            <div class="attendance-graph">
+                <h2>Overall Attendance Graph</h2>
+                <canvas id="attendanceChart"></canvas>
+            </div>
+            <!-- Overall Progress Graph -->
+            <div class="progress-graph">
+                <h2>Overall Progress Graph</h2>
+                <canvas id="progressChart"></canvas>
+            </div>
         </div>
     </div>
 
     <div class="courses">
         <h2>Your Courses</h2>
-        <p>Scroll down to view your enrolled courses</p>
+        <div class="course-details">
+            <h3>Course Details</h3>
+
+            <!-- Java Course with Dropdown -->
+            <div class="course-section">
+                <details>
+                    <summary>Java (70% Completed)</summary>
+                    <div class="course-content">
+                        <p><strong>Course Progress:</strong> 70%</p>
+                        <p><strong>Assignments:</strong> 1 Completed, 1 Pending</p>
+                        <p><strong>Quizzes:</strong> Quiz 1 (80%), Quiz 2 (90%)</p>
+                        <p><strong>Assessment:</strong> Strong</p>
+                        <div class="course-graph">
+                            <canvas id="javaChart"></canvas>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Python Course with Dropdown -->
+            <div class="course-section">
+                <details>
+                    <summary>Python (80% Completed)</summary>
+                    <div class="course-content">
+                        <p><strong>Course Progress:</strong> 80%</p>
+                        <p><strong>Assignments:</strong> 1 Completed, 1 Pending</p>
+                        <p><strong>Quizzes:</strong> Quiz 1 (85%), Quiz 2 (92%)</p>
+                        <p><strong>Assessment:</strong> Excellent</p>
+                        <div class="course-graph">
+                            <canvas id="pythonChart"></canvas>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Additional Courses can be added similarly -->
+        </div>
     </div>
 </section>
+
+<!-- Chart.js Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Overall Attendance Graph
+    const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+    const attendanceChart = new Chart(attendanceCtx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Overall Attendance',
+                data: [85, 90, 75, 80, 95, 90, 85],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2,
+                fill: true,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // Overall Progress Graph
+    const progressCtx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(progressCtx, {
+        type: 'radar',
+        data: {
+            labels: ['Assignments', 'Exams', 'Projects', 'Quizzes'],
+            datasets: [{
+                label: 'Overall Performance',
+                data: [80, 90, 85, 75],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // Java Course Graph
+    const javaCtx = document.getElementById('javaChart').getContext('2d');
+    const javaChart = new Chart(javaCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Assignments', 'Syllabus', 'Quizzes'],
+            datasets: [{
+                label: 'Java Progress',
+                data: [70, 50, 80],
+                backgroundColor: ['#ff9800', '#ff9800', '#ff9800']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // Python Course Graph
+    const pythonCtx = document.getElementById('pythonChart').getContext('2d');
+    const pythonChart = new Chart(pythonCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Assignments', 'Syllabus', 'Quizzes'],
+            datasets: [{
+                label: 'Python Progress',
+                data: [80, 60, 90],
+                backgroundColor: ['#2196f3', '#2196f3', '#2196f3']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

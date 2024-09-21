@@ -1,36 +1,103 @@
 .courses {
-    padding: 50px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.courses h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 #course-search {
-    padding: 10px;
-    width: 300px;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
     margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+#course-search:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.2);
 }
 
 .course-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .course-card {
     background-color: #fff;
-    border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
-    margin: 10px;
-    width: 250px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .course-card:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .course-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
     margin-bottom: 10px;
 }
 
 .course-card p {
+    font-size: 1rem;
     color: #666;
+    line-height: 1.5;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Adjust the width to make it shorter */
+    margin: 0 auto; /* Centers the search bar */
+    margin-bottom: 30px;
+}
+
+.course-search {
+    width: 80%; /* Adjust the width of the input field */
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+    height: 100%; /* Ensure the input height is 100% to match the button */
+}
+
+.search-button {
+    padding: 15px 15px 15px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    height: 100%; /* Make sure the button height is the same as the input field */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-button:hover {
+    background-color: #0056b3;
 }

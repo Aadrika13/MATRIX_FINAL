@@ -1,26 +1,87 @@
-.about {
-    padding: 50px;
-    background-color: #eef2f3;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+body {
+    background-color: #ff0066; /* Set the background color */
+    background-image: url('../images/background.jpg'); /* Set the background image URL */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Slider and Banner */
+.banner {
+    width: 100%;
+    height: 100vh;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.about h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.banner .slider {
+    position: absolute;
+    width: 250px; /* Adjust width for smaller size */
+    height: 250px;
+    top: 30%;
+    left: calc(50% - 125px); /* Adjust for centering */
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 1s ease-in-out;
 }
 
-.about p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 30px;
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * 360deg / var(--quantity))) translateZ(300px); /* Reduce translateZ value */
+    transition: transform 0.5s ease-in-out;
 }
 
-.contact-us {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.banner .slider .item img {
+    width: 80%; /* Keep the image in line with the new dimensions */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits without distortion */
+    cursor: pointer;
 }
+
+.banner .slider .item .info-card {
+    position: absolute;
+    bottom: 15px; /* Adjust based on space */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px; /* Adjust width to fit text */
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.8em;
+    border-radius: 6px;
+    opacity: 0; /* Default to hidden */
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show info-card on hover */
+.banner .slider .item:hover .info-card {
+    opacity: 1;
+    bottom: 100%; /* Adjust to be above the image */
+}
+
+/* Banner content heading */
+.banner .content {
+    position: absolute;
+    top: 0;
+    width: 110%;
+    display: flex;
+    justify-content: center; /* Center the heading */
+    margin-top: 20px;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 2.5em; /* Reduce the size for better fit */
+    line-height: 1em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better readability */
+}
+

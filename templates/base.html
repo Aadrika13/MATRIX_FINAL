@@ -6,6 +6,8 @@
     <title>{% block title %}Your Project{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ css_file) }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/about.css') }}"> -->
+    <script src="{{ url_for('static', filename='../static/js/about.js') }}" defer></script>
 </head>
 <body>
 
@@ -19,7 +21,7 @@
             <li class="profile">
                 <a href="#">Profile</a>
                 <ul class="dropdown">
-                    <li><a href="{{ url_for('profile') }}">Edit Profile</a></li>
+                    <li><a href="{{ url_for('profile') }}">Edit</a></li>
                     <li><a href="{{ url_for('home') }}">Logout</a></li>
                 </ul>
             </li>
@@ -33,7 +35,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Project. All rights reserved.</p>
+        <p>&copy; 2024 Hustlers. All rights reserved.</p>
     </footer>
 
 </body>

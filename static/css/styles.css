@@ -187,6 +187,47 @@ header {
     margin-bottom: 10px;
 }
 
+/* Color Combinations for Dashboard, Courses, Services, About Us Blocks */
+#dashboard:hover {
+    background-color: #4a90e2; /* Hover - Dark blue */
+    color: white;
+}
+
+#dashboard:active {
+    background-color: #2e6da4; /* Click - Even darker blue */
+    color: white;
+}
+
+#courses:hover {
+    background-color: #50e3c2; /* Hover - Light teal */
+    color: white;
+}
+
+#courses:active {
+    background-color: #38b29e; /* Click - Darker teal */
+    color: white;
+}
+
+#services:hover {
+    background-color: #f5a623; /* Hover - Orange */
+    color: white;
+}
+
+#services:active {
+    background-color: #e0861d; /* Click - Darker orange */
+    color: white;
+}
+
+#about:hover {
+    background-color: #bd10e0; /* Hover - Violet */
+    color: white;
+}
+
+#about:active {
+    background-color: #9c0fbf; /* Click - Darker violet */
+    color: white;
+}
+
 /* Footer Section */
 footer {
     background-color: rgba(0, 0, 0, 0.7);

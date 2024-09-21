@@ -1,13 +1,99 @@
 {% extends 'base.html' %}
 
-{% block title %}Progress Report{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<section class="report">
-    <h1>Progress Report</h1>
-    <div class="report-details">
-        <h2>Course Name</h2>
-        <p>Your progress report for each course you are enrolled in.</p>
+<section class="dashboard">
+    <div class="courses">
+        <div class="course-details">
+            <h3>Report Details</h3>
+
+            <!-- Java Course with Dropdown -->
+            <div class="course-section">
+                <details>
+                    <summary>Java (70% Completed)</summary>
+                    <div class="course-content">
+                        <p><strong>Course Progress:</strong> 70%</p>
+                        <p><strong>Assignments:</strong> 1 Completed, 1 Pending</p>
+                        <p><strong>Quizzes:</strong> Quiz 1 (80%), Quiz 2 (90%)</p>
+                        <p><strong>Assessment:</strong> Strong</p>
+                        <div class="course-graph">
+                            <canvas id="javaChart"></canvas>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Python Course with Dropdown -->
+            <div class="course-section">
+                <details>
+                    <summary>Python (80% Completed)</summary>
+                    <div class="course-content">
+                        <p><strong>Course Progress:</strong> 80%</p>
+                        <p><strong>Assignments:</strong> 1 Completed, 1 Pending</p>
+                        <p><strong>Quizzes:</strong> Quiz 1 (85%), Quiz 2 (92%)</p>
+                        <p><strong>Assessment:</strong> Excellent</p>
+                        <div class="course-graph">
+                            <canvas id="pythonChart"></canvas>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Additional Courses can be added similarly -->
+        </div>
     </div>
 </section>
+
+<!-- Chart.js Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Java Course Graph
+    const javaCtx = document.getElementById('javaChart').getContext('2d');
+    const javaChart = new Chart(javaCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Assignments', 'Syllabus', 'Quizzes'],
+            datasets: [{
+                label: 'Java Progress',
+                data: [70, 50, 80],
+                backgroundColor: ['#ff9800', '#ff9800', '#ff9800']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // Python Course Graph
+    const pythonCtx = document.getElementById('pythonChart').getContext('2d');
+    const pythonChart = new Chart(pythonCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Assignments', 'Syllabus', 'Quizzes'],
+            datasets: [{
+                label: 'Python Progress',
+                data: [80, 60, 90],
+                backgroundColor: ['#2196f3', '#2196f3', '#2196f3']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}
